@@ -1,0 +1,9 @@
+var choice_val = "";
+inputs = document.getElementsByName("playerChoice");
+for(var input_stuff in inputs){
+  if(inputs[input_stuff].checked)
+  {
+    choice_val = inputs[input_stuff].value;
+    break;
+  }
+}
