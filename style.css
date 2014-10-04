@@ -16,31 +16,6 @@ h3 {
 	font-size: 200%;
 }
 
-.radio {
-	height: 300px;
-	text-align: center;
-	font-size: 300%;
-}
-
-#radio1 {
-	float: left;
-	width: 20%;
-	background-color: rgb(104, 232, 93);
-	display: inline;
-}
-
-#radio2 {
-	width: 20%;
-	background-color: rgb(42, 1, 255);
-	display: inline;
-}
-
-#radio3 {
-	float: right;
- 	width: 20%;
-	background-color: rgb(232, 6, 20);
-	display: inline;
-}
 
 
 
