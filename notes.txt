@@ -1,3 +1,9 @@
+<input type="radio" name="playerChoice" value="rock" /> Rock <br />
+	<input type="radio" name="playerChoice" value="paper" /> Paper <br />
+	<input type="radio" name="playerChoice" value="scissors" /> Scissors <br />
+
+Here's the code to find out which radio button is selected:
+
 var choice_val = "";
 inputs = document.getElementsByName("playerChoice");
 for(var input_stuff in inputs){
