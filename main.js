@@ -1,4 +1,4 @@
-var userChoice = prompt("Do you choose rock, paper or scissors?");
+var userChoice;
 
 var computerChoice = Math.random();
 if (computerChoice < 0.34) {
@@ -11,36 +11,26 @@ if (computerChoice < 0.34) {
 
 var compare = function(choice1, choice2) { 
         if (choice1 === choice2) {
-    prompt("The result is a tie, do it again");
+            document.getElementById("result").innerHTML = "Tie!";
     } else if (choice1 === "rock") {
     if (choice2 === "scissors") {
-        return "rock wins";
+            document.getElementById("result").innerHTML = "You Win!"
     } else {
-        return "paper wins";
+            document.getElementById("result").innerHTML = "You Lose!";
     }
     } else if (choice1 === "paper") {
     if (choice2 === "rock") {
-        return "paper wins";
+            document.getElementById("result").innerHTML = "You Win!"
     } else {
-        return "scissors win";
+            document.getElementById("result").innerHTML = "You Lose!";
     }
     } else if (choice1 === "scissors") {
     if (choice2 === "rock") {
-        return "rock wins";
+            document.getElementById("result").innerHTML = "You Win!"
     } else {
-        return "scissors wins";
+            document.getElementById("result").innerHTML = "You Lose!";
     }
     }
     }
-
-var choice_val = "";
-inputs = document.getElementsByName("playerChoice");
-for(var input_stuff in inputs){
-  if(inputs[input_stuff].checked)
-  {
-    choice_val = inputs[input_stuff].value;
-    break;
-  }
-}
 
 compare(userChoice, computerChoice)

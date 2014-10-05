@@ -4,7 +4,7 @@
 <head>
 	<title>Rock Paper Scissors</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript"></script>
+	<script src="main.js"></script>
 </head>
 <body>
 	 <div class="main">
@@ -16,13 +16,55 @@
 
 	 <div class="radio">
 
-	 	<button id="radio1">Rock</button>
-	 	<button id="radio2">Paper</button>
-	 	<button id="radio3">Scissors</button>
-
+	 	<button onclick='choose("rock")'>Rock</button>
+	 	<button onclick='choose("paper")'>Paper</button>
+	 	<button onclick='choose("scissors")'>Scissors</button>
+	 	<p id="result"></p>
 		</div>
 
 	</div>
+
+	<script type="text/javascript">
+	var userChoice;
+	var choose = function(choice) {
+		userChoice = choice;
+	}
+
+	var computerChoice = Math.random();
+		if (computerChoice < 0.34) {
+		computerChoice = "rock";
+		} else if(computerChoice <= 0.67) {
+			computerChoice = "paper";
+		} else {
+		computerChoice = "scissors";
+		} console.log("Computer: " + computerChoice);
+
+	var compare = function(choice1, choice2) { 
+        if (choice1 === choice2) {
+            document.getElementById("result").innerHTML = "Tie!";
+    		} else if (choice1 === "rock") {
+    	if (choice2 === "scissors") {
+            document.getElementById("result").innerHTML = "You Win!"
+    		} else {
+            document.getElementById("result").innerHTML = "You Lose!";
+    		}
+    		} else if (choice1 === "paper") {
+    	if (choice2 === "rock") {
+            document.getElementById("result").innerHTML = "You Win!"
+    		} else {
+            document.getElementById("result").innerHTML = "You Lose!";
+    		}
+    		} else if (choice1 === "scissors") {
+    		if (choice2 === "rock") {
+            document.getElementById("result").innerHTML = "You Win!"
+    		} else {
+            document.getElementById("result").innerHTML = "You Lose!";
+    		}
+    		}
+    		}
+
+compare(userChoice, computerChoice)
+	</script>
 
 </body>
 </html>
