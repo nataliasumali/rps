@@ -2,14 +2,15 @@ body {
 	background-image: url(images/images.jpg);
 	background-repeat: no-repeat;
 	background-size: cover; 
+	background-attachment: fixed;
 	font-family: Arial;
 }
 
 .main{
-	height: 100px;	
+	height: 50px;	
 	text-align: center;
 	background-color: rgb(232, 223, 159);
-	font-size: 250%
+	font-size: 100%;
 }
 
 h3 {
@@ -19,5 +20,6 @@ h3 {
 p {
 	font-size: 200%;
 	text-align: center;
-	color: red;
+	color: rgb(147, 96, 232);
 }
+
